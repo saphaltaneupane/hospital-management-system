@@ -1,11 +1,22 @@
 package com.bway.springproject.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="user_tbl")
+
 public class User {
     private int id;
     private String fname;
     private String lname;
     private String username;
     private String password;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY) // auto increment
 	public int getId() {
 		return id;
 	}
