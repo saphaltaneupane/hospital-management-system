@@ -10,13 +10,14 @@ import jakarta.persistence.Table;
 @Table(name="user_tbl")
 
 public class User {
+	 @Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY) // auto increment
     private int id;
     private String fname;
     private String lname;
     private String username;
     private String password;
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY) // auto increment
+   
 	public int getId() {
 		return id;
 	}
